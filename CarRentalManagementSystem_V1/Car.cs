@@ -13,6 +13,7 @@ namespace CarRentalManagementSystem_V1
         private string Brand { get; set; }
         private string Model { get; set; }
         private decimal RentalPrice { get; set; }
+        private int TotalCars { get; set; }
 
         public Car(string carId, string brand, string model, decimal rentalPrice)
         {
@@ -20,6 +21,7 @@ namespace CarRentalManagementSystem_V1
             Brand = brand;
             Model = model;
             RentalPrice = rentalPrice;
+
         }
 
         public override string ToString()
@@ -46,16 +48,34 @@ namespace CarRentalManagementSystem_V1
 
     }
 
-    //public class ElectricCar : Car
-    //{
-    //    public decimal BatteryCapacity{ get; set; }
-    //    public int MotorPower { get; set; }
+    public class ElectricCar : Car
+    {
+        
 
-    //}
+        public decimal BatteryCapacity { get; set; }
+        public int MotorPower { get; set; }
+        public ElectricCar(string carId, string brand, string model, decimal rentalPrice) : base(carId, brand, model, rentalPrice)
+        {
+        }
+        public Car DisplayElectricCarInfo()
+        {
+            return
+        }
 
-    //public class PetrolCar : Car
-    //{
-    //    public decimal FuelTankCapacity { get; set; }
-    //    public int EngineCapacity { get; set; }
-    //}
+    }
+
+    public class PetrolCar : Car
+    {
+        public PetrolCar(string carId, string brand, string model, decimal rentalPrice) : base(carId, brand, model, rentalPrice)
+        {
+        }
+
+        public decimal FuelTankCapacity { get; set; }
+        public int EngineCapacity { get; set; }
+
+        public Car DisplayPetrolCarInfo()
+        {
+            return 
+        }
+    }
 }

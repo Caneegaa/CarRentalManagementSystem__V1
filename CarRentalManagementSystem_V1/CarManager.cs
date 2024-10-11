@@ -26,12 +26,12 @@ namespace CarRentalManagementSystem_V1
              
             var tobeUpdated = Cars.SingleOrDefault(c => c.getCarId() == carId);
 
-            var CarId = tobeUpdated.getCarId();
+            
             var Brand = tobeUpdated.getBrand();
             var Model = tobeUpdated.getModel();
             var RentalPrice = tobeUpdated.getRentalPrice();
 
-            CarId = carId;
+            
             Brand = brand;
             Model = model;
             RentalPrice = rentalPrice;
