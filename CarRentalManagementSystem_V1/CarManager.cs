@@ -45,5 +45,18 @@ namespace CarRentalManagementSystem_V1
             Cars.Remove(tobedeleted);
             Console.WriteLine("Car Deleted Successfully");
         }
+
+
+
+
+        public decimal ValidateCarRentalPrice(int rentalPrice)
+        {
+            while (rentalPrice < 0)
+            {
+                Console.WriteLine("Enter a positive value");
+                Convert.ToDecimal(rentalPrice);
+            }
+            return rentalPrice;
+        }
     }
 }
