@@ -21,7 +21,7 @@ namespace CarRentalManagementSystem_V1
             Brand = brand;
             Model = model;
             RentalPrice = rentalPrice;
-
+            TotalCars++;
         }
 
         public override string ToString()
