@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarRentalManagementSystem_V1
 {
-    internal class Car
+    public class Car
     {
 
         private string CarId { get; set; }
@@ -45,4 +45,17 @@ namespace CarRentalManagementSystem_V1
         }
 
     }
+
+    //public class ElectricCar : Car
+    //{
+    //    public decimal BatteryCapacity{ get; set; }
+    //    public int MotorPower { get; set; }
+
+    //}
+
+    //public class PetrolCar : Car
+    //{
+    //    public decimal FuelTankCapacity { get; set; }
+    //    public int EngineCapacity { get; set; }
+    //}
 }
