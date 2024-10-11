@@ -38,8 +38,12 @@ namespace CarRentalManagementSystem_V1
                         var model = Console.ReadLine();
                         Console.WriteLine("Enter Car Rental Price");
                         var rentalPrice = Convert.ToDecimal(Console.ReadLine());
+                        Console.WriteLine("Enter Car Battery/FuelTank Capacity");
+                        var batOrFuelCap = Convert.ToDecimal(Console.ReadLine());
+                        Console.WriteLine("Enter Car MotorPower/EngineCapacity");
+                        var motorOrEngine = Convert.ToInt32(Console.ReadLine());
 
-                        
+
                         Console.WriteLine("Car added Successfully");
 
                         break;
@@ -59,8 +63,12 @@ namespace CarRentalManagementSystem_V1
                         var modelUpdate = Console.ReadLine();
                         Console.WriteLine("Enter New Car Rental Price");
                         var rentalPriceUpdate = Convert.ToDecimal(Console.ReadLine());
+                        Console.WriteLine("Enter Car Battery/FuelTank Capacity");
+                        var batOrFuelCapUpdate = Convert.ToDecimal(Console.ReadLine());
+                        Console.WriteLine("Enter Car MotorPower/EngineCapacity");
+                        var motorOrEngineUpdate = Convert.ToInt32(Console.ReadLine());
 
-                        carManager.UpdateCar(carIdUpdate, brandUpdate, modelUpdate, rentalPriceUpdate);
+                        carManager.UpdateCar(carIdUpdate, brandUpdate, modelUpdate, rentalPriceUpdate, batOrFuelCapUpdate, motorOrEngineUpdate);
                         Console.WriteLine("Car Updated Successfully");
                         break;
                     case 4:
