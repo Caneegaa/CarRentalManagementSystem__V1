@@ -8,6 +8,7 @@ namespace CarRentalManagementSystem_V1
 {
     internal class Car
     {
+
         private string CarId { get; set; }
         private string Brand { get; set; }
         private string Model { get; set; }
@@ -26,7 +27,22 @@ namespace CarRentalManagementSystem_V1
             return $"ID: {CarId}, Brand: {Brand}, Model: {Model}, RentalPrice: {RentalPrice}";
         }
 
-        
+        public string getCarId()
+        {
+            return CarId ;
+        }
+        public string getBrand()
+        {
+            return Brand;
+        }
+        public string getModel()
+        {
+            return Model;
+        }
+        public decimal getRentalPrice()
+        {
+            return RentalPrice;
+        }
 
     }
 }
