@@ -46,6 +46,9 @@ namespace CarRentalManagementSystem_V1
             return RentalPrice;
         }
 
+       
+
+
     }
 
     public class ElectricCar : Car
@@ -57,9 +60,10 @@ namespace CarRentalManagementSystem_V1
         public ElectricCar(string carId, string brand, string model, decimal rentalPrice) : base(carId, brand, model, rentalPrice)
         {
         }
-        public Car DisplayElectricCarInfo()
+        public void DisplayElectricCarInfo(string carId, string brand, string model, decimal rentalPrice, decimal batteryCapacity, int motorCapacity)
         {
-            return
+            Console.WriteLine($"{carId}, {brand}, {model}, {rentalPrice},{batteryCapacity}, {motorCapacity} ");
+            
         }
 
     }
@@ -73,9 +77,10 @@ namespace CarRentalManagementSystem_V1
         public decimal FuelTankCapacity { get; set; }
         public int EngineCapacity { get; set; }
 
-        public Car DisplayPetrolCarInfo()
+        public void DisplayPetrolCarInfo(string carId, string brand, string model, decimal rentalPrice, decimal fuelTankCapacity, int EngineCapacity)
         {
-            return 
+            Console.WriteLine($"{carId}, {brand}, {model}, {rentalPrice},{fuelTankCapacity}, {EngineCapacity} ");
+
         }
     }
 }
