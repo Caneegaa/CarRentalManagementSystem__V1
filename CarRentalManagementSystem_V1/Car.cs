@@ -46,7 +46,10 @@ namespace CarRentalManagementSystem_V1
             return RentalPrice;
         }
 
-       
+        public virtual void DisplayCarInfo(string carId, string brand, string model, decimal rentalPrice)
+        {
+            Console.WriteLine($"{carId}, {brand}, {model}, {rentalPrice}");
+        }
 
 
     }
@@ -60,9 +63,9 @@ namespace CarRentalManagementSystem_V1
         public ElectricCar(string carId, string brand, string model, decimal rentalPrice) : base(carId, brand, model, rentalPrice)
         {
         }
-        public void DisplayElectricCarInfo(string carId, string brand, string model, decimal rentalPrice, decimal batteryCapacity, int motorCapacity)
+        public override void DisplayCarInfo(string carId, string brand, string model, decimal rentalPrice)
         {
-            Console.WriteLine($"{carId}, {brand}, {model}, {rentalPrice},{batteryCapacity}, {motorCapacity} ");
+            Console.WriteLine($"{carId}, {brand}, {model}, {rentalPrice} ");
             
         }
 
@@ -77,9 +80,9 @@ namespace CarRentalManagementSystem_V1
         public decimal FuelTankCapacity { get; set; }
         public int EngineCapacity { get; set; }
 
-        public void DisplayPetrolCarInfo(string carId, string brand, string model, decimal rentalPrice, decimal fuelTankCapacity, int EngineCapacity)
+        public override void DisplayCarInfo(string carId, string brand, string model, decimal rentalPrice)
         {
-            Console.WriteLine($"{carId}, {brand}, {model}, {rentalPrice},{fuelTankCapacity}, {EngineCapacity} ");
+            Console.WriteLine($"{carId}, {brand}, {model}, {rentalPrice} ");
 
         }
     }
